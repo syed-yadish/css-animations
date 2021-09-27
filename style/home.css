@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  margin: 0;
+}
+.sky {
+  position: relative;
+  height: 40%;
+  background-color: skyblue;
+}
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+  width: 300px;
+  top: 0;
+  animation: wind 50s linear infinite reverse;
+}
+.bird {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  animation: bird 10s linear infinite;
+}
+@keyframes wind {
+  from {
+    left: -350px;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes bird {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 100%;
+  }
+}
+.shake {
+  width: 25%;
+  color: darkslategray;
+  height: auto;
+  font-weight: 700;
+  font-size: 45px;
+  margin-left: 40%;
+  padding: 35px;
+  letter-spacing: 5px;
+  border-radius: 4rem;
+  text-transform: uppercase;
+}
+h2:hover {
+  animation-name: animate__shakeY;
+  cursor: pointer;
+  background-color: cadetblue;
+}
